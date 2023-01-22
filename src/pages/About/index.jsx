@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Accordion } from "react-bootstrap";
+import PropTypes from "prop-types";
 
 const About = ({ dataManager }) => {
     return (
@@ -108,7 +109,7 @@ const About = ({ dataManager }) => {
                     </Row>
                 </Container>
 
-                <Container className="py-5">
+                <Container className="pt-2">
                     <Row className="justify-content-md-center">
                         <Col md={{ span: 10 }}>
                             <Accordion defaultActiveKey="0">
@@ -164,6 +165,26 @@ const About = ({ dataManager }) => {
                         </Col>
                     </Row>
                 </Container>
+
+                <Container className="py-5">
+                    <Row className="justify-content-md-center">
+                        <Col md={{ span: 10 }} style={{ textAlign: "center" }}>
+                            <h1>Kenali Kami Lebih Dekat</h1>
+                            <div className="video-responsive mt-5">
+                                <iframe
+                                    width="853"
+                                    height="480"
+                                    src={`https://www.youtube.com/embed/mFX_P6xho8k`}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    title="Embedded youtube"
+                                />
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+
             </div>
         </>
     );
