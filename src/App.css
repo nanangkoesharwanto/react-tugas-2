@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+.link_button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  color: rgb(219, 255, 39);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer {
+  background: #deedd6;
+}
+
+.bg-blue {
+  background: #f5fdfe;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+  .img-nav {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+}
+
+.bg-mid {
+  background-image: url("https://edspert.id/assets/img/Ellipse-1.png");
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-button {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.btn-back-to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+  height: 40px;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+}
