@@ -9,6 +9,8 @@ const Hero = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <>
       <div className={`${styles.heroWrapper} center`}>
@@ -27,7 +29,10 @@ const Hero = () => {
             <i className="fas fa-map-marker-alt">
               <FontAwesomeIcon icon={faEnvelope} />
             </i>
-            <input type="text" placeholder="Ketik Email Anda" />
+            <input type="text" placeholder="Ketik Email Anda"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+            />
             <i className={`${styles.arrow} fas fa-arrow-right`}></i>
           </div>
           <Button className="mt-4" variant="success" type="button" onClick={handleShow}>
@@ -46,7 +51,7 @@ const Hero = () => {
         <Modal.Header closeButton>
           <Modal.Title>Subscribtion</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Terima kasih, ada telah terdaftar di Komunitas Belajar.</Modal.Body>
+        <Modal.Body>Terima kasih,<br/><b>Email anda : {inputValue}</b><br/>telah terdaftar di Komunitas Belajar Bersama.</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
